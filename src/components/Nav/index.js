@@ -11,6 +11,7 @@ function Nav(props) {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
   console.log(capitalizeFirstLetter(currentCategory.name));
+
   // const [categories] = useState([
   //   {
   //     name: 'Commercial',

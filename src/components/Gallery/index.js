@@ -1,27 +1,25 @@
 //we import useState as a named import from react destructuring from imports
 import React from "react";
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import photo from "../../assets/small/commercial/0.jpg";
+//import photo from "../../assets/small/commercial/0.jpg";
+import PhotoList from "./PhotoList";
 
-function Gallery(props) {
-  const currentCategory = {
-    name: "commercial",
-    description: "Photos of grocery stores, food trucks, and other commercial projects",
-  };
+function Gallery({ currentCategory }) {
+  const { name, description } = currentCategory;
+  // const currentCategory = {
+  //   name: [],
+  //   description: "Photos of grocery stores, food trucks, and other commercial projects",
+  // };
 
   return (
     <section>
-      <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
-      <p>{currentCategory.name}</p>
-      <div>
-        <img
-          src={photo}
-          alt='Commercial gallery items' className="img-thumbnail mx-1"
-        />
-      </div>
+      <h1 data-testid="h1tag">{capitalizeFirstLetter(name)}</h1>
+      <p>{description}</p>
+      <PhotoList category={currentCategory.name}></PhotoList>
     </section>
   )
 }
+//So how are we getting that category variable to work? First, we must use some prop drilling and pass down the currentCategory.name as a prop into the Photolist component from Gallery
 
 export default Gallery;
 

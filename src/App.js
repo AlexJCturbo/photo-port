@@ -25,6 +25,7 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
+  //We pass the current category, which is the category selected by the user, from the Gallery.
   return (
     <div>
       <Nav categories={categories}
@@ -32,7 +33,7 @@ function App() {
         setCurrentCategory={setCurrentCategory}
       ></Nav>
       <main>
-        <Gallery></Gallery>
+        <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
       </main>
     </div>
