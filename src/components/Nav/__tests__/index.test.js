@@ -16,6 +16,7 @@ const mockSetCurrentCategory = jest.fn();
 describe('Nav component', () => {
 
   //Baseline test
+
   // test('render', () => {
   //   render(<Nav />);
   // });
