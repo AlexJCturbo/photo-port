@@ -1,10 +1,11 @@
 //import React from 'react';
 //import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import About from './components/About/index'
 import Nav from './components/Nav/index'
 import Gallery from './components/Gallery';
-import { useState } from 'react';
+import ContactForm from './components/Contact';
 
 //This App.js file is the center of the application.
 //Think of App.js as the root component, or the wrapper component that houses all of the other components. To effect any change on the application, we need to either modify this file or add components inside it.
@@ -33,6 +34,7 @@ function App() {
         setCurrentCategory={setCurrentCategory}
       ></Nav>
       <main>
+        <ContactForm></ContactForm>
         <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
       </main>
