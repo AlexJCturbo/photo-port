@@ -13,17 +13,17 @@ const PhotoList = ({ category }) => {
     {
       name: 'Grocery booth',
       category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Lorem nulla vehicula nisi, a sollicitudin sem diam vitae risus',
     },
     {
       name: 'Building exterior',
       category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Nunc a pellentesque sem, ac tincidunt enim. Donec varius, enim eu egestas sagittis',
     },
     {
       name: 'Restaurant table',
       category: 'commercial',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Aliquam semper tortor nec odio molestie, eget volutpat dolor tincidunt',
     },
     {
       name: 'Cafe interior',
@@ -33,17 +33,17 @@ const PhotoList = ({ category }) => {
     {
       name: 'Cat green eyes',
       category: 'portraits',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Lorem nulla vehicula nisi, a sollicitudin sem diam vitae risus',
     },
     {
       name: 'Green parrot',
       category: 'portraits',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Nunc a pellentesque sem, ac tincidunt enim. Donec varius, enim eu egestas sagittis',
     },
     {
       name: 'Yellow macaw',
       category: 'portraits',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Aliquam semper tortor nec odio molestie, eget volutpat dolor tincidunt',
     },
     {
       name: 'Pug smile',
@@ -53,32 +53,32 @@ const PhotoList = ({ category }) => {
     {
       name: 'Pancakes',
       category: 'food',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Lorem nulla vehicula nisi, a sollicitudin sem diam vitae risus',
     },
     {
       name: 'Burrito',
       category: 'food',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Nunc a pellentesque sem, ac tincidunt enim. Donec varius, enim eu egestas sagittis',
     },
     {
       name: 'Scallop pasta',
       category: 'food',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Aliquam semper tortor nec odio molestie, eget volutpat dolor tincidunt',
     },
     {
       name: 'Burger',
       category: 'food',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Nunc a pellentesque sem, ac tincidunt enim. Donec varius, enim eu egestas sagittis',
     },
     {
       name: 'Fruit bowl',
       category: 'food',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Lorem nulla vehicula nisi, a sollicitudin sem diam vitae risus',
     },
     {
       name: 'Green river',
       category: 'landscape',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Aliquam semper tortor nec odio molestie, eget volutpat dolor tincidunt',
     },
     {
       name: 'Docks',
@@ -88,17 +88,18 @@ const PhotoList = ({ category }) => {
     {
       name: 'Panoramic village by sea',
       category: 'landscape',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Nunc a pellentesque sem, ac tincidunt enim. Donec varius, enim eu egestas sagittis',
     },
     {
       name: 'Domestic landscape',
       category: 'landscape',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'commercial',
+      description: 'Lorem nulla vehicula nisi, a sollicitudin sem diam vitae risus',
     },
     {
       name: 'Park bench',
       category: 'landscape',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'Aliquam semper tortor nec odio molestie, eget volutpat dolor tincidunt',
     },
   ]);
 
