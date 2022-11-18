@@ -3,7 +3,13 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   //We cleaned up Nav/index.js by "lifting" the state to the parent component, App.js.
-  const { categories = [], setCurrentCategory, currentCategory } = props;
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+    contactSelected,
+    setContactSelected
+  } = props;
 
   /*We must use a Hook to trigger a re-render on a variable value change. To update the document.title, we will introduce a new Hook called useEffect. The main difference between useEffect and useState is that useEffect is an API that reflects the lifecycle methods of the component, such as when the component mounts, unmounts, or updates.
   The first argument is the callback function, and the second argument is an array with a single element, currentCategory. The second argument directs the hook to re-render the component on changes to the value of this state.*/
@@ -47,16 +53,22 @@ function Nav(props) {
       <nav>
         <ul className='flex-row'>
           <li className='mx-2'>
-            <a data-testid='about' href='#about'>About me</a>
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>About me</a>
           </li>
-          <li>
-            <span>Contact</span>
+          {/* Note the addition of the { } to contain the JavaScript expression, as well as the template literal to interpolate the JavaScript statement. */}
+          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
+
+          {/* The navActive class value is assigned only if Contact hasn't been selected and the current category HAS been selected. */}
           {categories.map((category) => (
-            <li className={`mx-1 ${currentCategory.name === category.name && 'navActive'
-              }`} key={category.name}>
+            <li
+              className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`
+                }`}
+              key={category.name}>
               <span onClick={() => {
-                setCurrentCategory(category)
+                setContactSelected(false);
+                setCurrentCategory(category);
               }}
               >
                 {capitalizeFirstLetter(category.name)}

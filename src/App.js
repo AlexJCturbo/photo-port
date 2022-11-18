@@ -26,17 +26,48 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
+  //set the initial value of contactSelected to false
+  const [contactSelected, setContactSelected] = useState(false);
+
   //We pass the current category, which is the category selected by the user, from the Gallery.
   return (
     <div>
-      <Nav categories={categories}
-        currentCategory={currentCategory}
+      <Nav
+        categories={categories}
         setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
+      {/* <Nav
+        categories={categories}
+        setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
+      ></Nav> */}
+
+      {/*We condition what renders based on which menu item the user selects from the navigation bar. To maintain this state, we added a useState Hook. 
+      Ternary operator: identified with the ? and : symbols, the ternary operator is a pattern in React to enable conditional rendering. With the ternary we supply the false condition to render as well
+      React fragments: <></> allow multiple elements to be grouped together. They allow to wrap elements without creating extra DOM nodes, like wrapping with a <div>*/}
       <main>
-        <ContactForm></ContactForm>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
+        {/* The preceding code is equivalent to the following conditional statement:
+        if(!contactSelected) {
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </> 
+        } else {
+          <ContactForm></ContactForm>
+        }
+        */}
+
       </main>
     </div>
   );
