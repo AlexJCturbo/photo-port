@@ -54,7 +54,7 @@ const ContactForm = () => {
   //onChange is an event listener. It will ensure that the handleChange function fires whenever a keystroke is typed into the input field for name.
   return (
     <section>
-      <h1>Contact me</h1>
+      <h1 data-testid='h1-tag'>Contact me</h1>
       <form id='contact-form' onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -84,7 +84,7 @@ const ContactForm = () => {
           }
         These two conditional statements are the same. If errorMessage has a truthy value, the <div> block will render. If errorMessage doesn't have an error message, the following <div> block doesn't render.  */}
 
-        <button type="submit">Submit</button>
+        <button data-testid='submitBtn' type="submit">Submit</button>
       </form>
     </section>
   )
