@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
-  //We cleaned up Nav/index.js by "lifting" the state to the parent component, App.js.
   const {
     categories = [],
     setCurrentCategory,
@@ -11,33 +10,11 @@ function Nav(props) {
     setContactSelected
   } = props;
 
-  /*We must use a Hook to trigger a re-render on a variable value change. To update the document.title, we will introduce a new Hook called useEffect. The main difference between useEffect and useState is that useEffect is an API that reflects the lifecycle methods of the component, such as when the component mounts, unmounts, or updates.
-  The first argument is the callback function, and the second argument is an array with a single element, currentCategory. The second argument directs the hook to re-render the component on changes to the value of this state.*/
+  /*Using a Hook to trigger a re-render on a variable value change. First argument is the callback function, second argument is array to direct the hook to re-render the component on changes.*/
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
   console.log(capitalizeFirstLetter(currentCategory.name));
-
-  // const [categories] = useState([
-  //   {
-  //     name: 'Commercial',
-  //     description: 'Photos of grocery stores, food trucks, and other commercial projects',
-  //   },
-  //   {
-  //     name: 'Portraits',
-  //     description: 'Portraits of people in my life',
-  //   },
-  //   {
-  //     name: 'food',
-  //     description: 'Delicious delicacies',
-  //   },
-  //   {
-  //     name: 'Landscape',
-  //     description: 'Fields, farmhouses, waterfalls, and the beauty of nature',
-  //   },
-  // ]);
-
-  // const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
     <header className='flex-row px-1'>
@@ -55,12 +32,9 @@ function Nav(props) {
           <li className='mx-2'>
             <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>About me</a>
           </li>
-          {/* Note the addition of the { } to contain the JavaScript expression, as well as the template literal to interpolate the JavaScript statement. */}
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
-
-          {/* The navActive class value is assigned only if Contact hasn't been selected and the current category HAS been selected. */}
           {categories.map((category) => (
             <li
               className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`
@@ -83,7 +57,3 @@ function Nav(props) {
 }
 
 export default Nav;
-
-/*Gallery is not a child of Nav, so we can't pass props from Nav to the Gallery. We could create a state in Gallery, but then it wouldn’t know about the navigation changing. Instead, we’re going to “lift” the state up one level.
-Whenever you think state needs to be used in multiple sibling components, it's normally a good idea to lift the state up until it can be passed as props to any child components that need it.
-Lift state to App.js and pass the currentCategory and its setter through to Nav. While we're at it, let's move categories up to the App level as well.*/

@@ -5,8 +5,6 @@ import Nav from '../index';
 
 afterEach(cleanup);
 
-//The Nav component has been modified in this lesson to handle props. The test suite for the Nav must reflect that in order to render and function properly.
-//In order to handle props for the Nav, we need to add the categories array as well as some mock functions. We can use these mock functions as props for the Nav component to render
 const categories = [
   { name: 'portraits', description: 'Portraits of people in my life' }
 ]
@@ -18,10 +16,6 @@ const mockSetContactSelected = jest.fn();
 describe('Nav component', () => {
 
   //Baseline test
-
-  // test('render', () => {
-  //   render(<Nav />);
-  // });
   it('renders', () => {
     render(<Nav
       categories={categories}
