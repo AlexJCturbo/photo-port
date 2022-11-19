@@ -27,11 +27,11 @@ SO THAT the page works without reloading every time a section is accessed and th
 
 ## Screen Captures
 
-![Portfolio 01 main](./src/utils/images/portfolio_01_main.png)
+![Portfolio 01 main](./src/utils/images/portfolio_01_categories.png)
 
-![Portfolio 02 contact](./src/utils/images/portfolio_02_contact.png)
+![Portfolio 02 contact](./src/utils/images/portfolio_02_modal.png)
 
-![Portfolio 03 modal](./src/utils/images/portfolio_03_modal.png)
+![Portfolio 03 modal](./src/utils/images/portfolio_03_contact.png)
 
 ###### [Back to Index](#Table-of-Contents)
 
