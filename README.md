@@ -48,6 +48,5 @@ SO THAT the page works without reloading every time a section is accessed and th
 ## Links
 
 - [Deployed Application](https://alexjcturbo.github.io/photo-port/)
-- [GitHub Repository](https://github.com/AlexJCturbo/photo-port)
 
 ###### [Back to Index](#Table-of-Contents)
